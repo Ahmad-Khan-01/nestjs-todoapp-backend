@@ -34,7 +34,7 @@ export class UserService {
     return await this.userRepo.find();
   }
   async findUserByEmail(email: string) {
-    return await this.userRepo.findOneOrFail({ where: { email: email } });
+    return await this.userRepo.findOne({ where: { email: email } });
   }
 
   async findOne(id: number) {
